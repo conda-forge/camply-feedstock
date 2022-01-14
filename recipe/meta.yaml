@@ -32,6 +32,8 @@ requirements:
     - tenacity
 
 test:
+  source_files:
+    - tests
   imports:
     - camply
     - camply.config
@@ -44,8 +46,10 @@ test:
   commands:
     - pip check
     - camply --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/juftin/camply

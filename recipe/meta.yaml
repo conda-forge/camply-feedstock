@@ -21,10 +21,10 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6,<3.10
+    - python >=3.6
   run:
     - pandas
-    - python >=3.6,<3.10
+    - python >=3.6
     - python-dotenv
     - pytz
     - pyyaml
@@ -35,6 +35,12 @@ test:
   imports:
     - camply
     - camply.config
+    - camply.notifications
+    - camply.providers
+    - camply.providers.xanterra
+    - camply.providers.recreation_dot_gov
+    - camply.search
+    - camply.utils
   commands:
     - pip check
     - camply --help

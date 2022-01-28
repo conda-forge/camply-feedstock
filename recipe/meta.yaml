@@ -25,6 +25,7 @@ requirements:
     - wheel
   run:
     - pandas
+    - pydantic
     - python >=3.6
     - python-dotenv
     - pytz

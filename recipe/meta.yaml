@@ -22,8 +22,8 @@ requirements:
     - pip
     - python >=3.6
     - setuptools >=42
-    - wheel
   run:
+    - click
     - pandas
     - pydantic
     - python >=3.6
@@ -31,6 +31,7 @@ requirements:
     - pytz
     - pyyaml
     - requests
+    - rich
     - tenacity
 
 test:

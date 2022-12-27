@@ -1,5 +1,5 @@
 {% set name = "camply" %}
-{% set version = "0.7.6" %}
+{% set version = "0.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/camply-{{ version }}.tar.gz
-  sha256: 52496f8e22efc0e21c1ded104d0ec9488dc12e56884fa36d861d5a89298dd0a4
+  sha256: 9dc9b43ab24d953c71f1fd18dfde536ca22cd6939d81f72dfc2aea966ce212f7
 
 build:
   number: 0

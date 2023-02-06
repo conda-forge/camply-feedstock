@@ -1,5 +1,5 @@
 {% set name = "camply" %}
-{% set version = "0.9.3" %}
+{% set version = "0.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/camply-{{ version }}.tar.gz
-  sha256: 029c6a612cbf8eb3d6ba4788d7161d32632b05d1d3b7bf0130246e65ecc3632b
+  sha256: ab3565bea5ce9f2a24460ff9ec842e5728443ce37b93b92f584e164c4d21127f
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - pyyaml >=5.1,<7.0
     - requests >=2.26.0
     - rich >=10.0.0
+    - rich-click >=1.6.1,<2.0.0
     - tenacity >=5.1.0
 
 test:

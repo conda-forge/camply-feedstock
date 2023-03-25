@@ -1,11 +1,11 @@
-About camply
-============
+About camply-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/camply-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/juftin/camply
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/camply-feedstock/blob/main/LICENSE.txt)
 
 Summary: camply, the campsite finder
 

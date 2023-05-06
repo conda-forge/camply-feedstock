@@ -47,6 +47,7 @@ test:
     - camply --help
     - pytest -vvv --capture=tee-sys tests
   requires:
+    - freezegun
     - pip
     - pytest
     - pytest-mock

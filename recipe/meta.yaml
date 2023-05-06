@@ -1,5 +1,5 @@
 {% set name = "camply" %}
-{% set version = "0.18.0" %}
+{% set version = "0.20.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/camply-{{ version }}.tar.gz
-  sha256: b4a740361191000c3d2bf7aa488cffa75592cfc6e46a18add342d526e011f67a
+  sha256: 7920851724840bfa0764e939cb1a833ced6e2b7b1ea6ae25e58fc6f83b9e00a5
 
 build:
   number: 0
@@ -21,13 +21,13 @@ requirements:
   host:
     - hatchling
     - pip
-    - python >=3.7.1,<4.0
+    - python >=3.8,<4.0
   run:
     - click ~=8.1.3
     - fake-useragent ~=1.1.3
     - pandas ~=1.5.3
     - pydantic ~=1.10.7
-    - python >=3.7.1,<4.0
+    - python >=3.8,<4.0
     - python-dotenv ~=1.0.0
     - pytz ~=2023.2
     - pyyaml ~=6.0
@@ -38,13 +38,21 @@ requirements:
     - tenacity ~=8.2.2
 
 test:
+  source_files:
+    - tests
   imports:
     - camply
   commands:
     - pip check
     - camply --help
+    - pytest -vvv --capture=tee-sys -k "not test_pushover_message and not test_pushover_campsite and not test_search_persist_json and not test_search_persist_pickle and not test_search_once_pushover" tests
   requires:
+    - freezegun
     - pip
+    - pytest
+    - pytest-mock
+    - pytest-vcr
+    - pytest-xdist
 
 about:
   home: https://github.com/juftin/camply

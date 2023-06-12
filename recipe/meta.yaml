@@ -46,6 +46,7 @@ test:
   commands:
     - pip check
     - camply --help
+    - export "PYTHONIOENCODING=utf8"
     - pytest -vvv --capture=tee-sys -k "not test_pushover_message and not test_pushover_campsite and not test_search_persist_json and not test_search_persist_pickle and not test_search_once_pushover" tests
   requires:
     - freezegun

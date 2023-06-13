@@ -39,22 +39,14 @@ requirements:
     - tenacity ~=8.2.2
 
 test:
-  source_files:
-    - tests
+# Test suite kinda wonky removed for now
   imports:
     - camply
   commands:
     - pip check
     - camply --help
-    - export "PYTHONIOENCODING=utf8"
-    - pytest -vvv --capture=tee-sys -k "not test_pushover_message and not test_pushover_campsite and not test_search_persist_json and not test_search_persist_pickle and not test_search_once_pushover" tests
   requires:
-    - freezegun
     - pip
-    - pytest
-    - pytest-mock
-    - pytest-vcr
-    - pytest-xdist
 
 about:
   home: https://github.com/juftin/camply

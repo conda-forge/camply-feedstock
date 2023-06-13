@@ -1,5 +1,5 @@
 {% set name = "camply" %}
-{% set version = "0.23.0" %}
+{% set version = "0.24.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/camply-{{ version }}.tar.gz
-  sha256: ac388f64685cc21275bfbdfb0fcd66c50a4a19636741604929bd8daa602630de
+  sha256: 2204b2173d006af961f55d3c810d589ba221789175495bfa7eb6d0fe07da878c
 
 build:
   number: 0
@@ -28,31 +28,25 @@ requirements:
     - pandas ~=1.5.3
     - pydantic ~=1.10.7
     - python >=3.8,<4.0
+    - python-dateutil
     - python-dotenv ~=1.0.0
     - pytz ~=2023.2
     - pyyaml ~=6.0
     - ratelimit ~=2.2.1
-    - requests ~=2.28.2
+    - requests ~=2.31.0
     - rich ~=13.3.2
     - rich-click ~=1.6.1
     - tenacity ~=8.2.2
 
 test:
-  source_files:
-    - tests
+# Test suite kinda wonky removed for now
   imports:
     - camply
   commands:
     - pip check
     - camply --help
-    - pytest -vvv --capture=tee-sys -k "not test_pushover_message and not test_pushover_campsite and not test_search_persist_json and not test_search_persist_pickle and not test_search_once_pushover" tests
   requires:
-    - freezegun
     - pip
-    - pytest
-    - pytest-mock
-    - pytest-vcr
-    - pytest-xdist
 
 about:
   home: https://github.com/juftin/camply

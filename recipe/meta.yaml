@@ -38,6 +38,9 @@ requirements:
     - tenacity >=8.2.2,<8.3.dev0
     - python-dateutil
 
+    # Needed but not listed
+    - importlib_resources
+
 test:
   imports:
     - camply

@@ -27,8 +27,7 @@ requirements:
     - click ~=8.1.3
     - fake-useragent ~=1.4.0
     - pandas >=2,<3
-    # pydantic 1.10.22 is not available, trying >=1.10.22
-    - pydantic >=1.10.22
+    - pydantic ~=1.10.22
     - python-dotenv ~=1.0.0
     - pytz ~=2023.2
     - pyyaml ~=6.0
@@ -42,8 +41,7 @@ test:
   imports:
     - camply
   commands:
-    # Disable pip check due to pydantic above
-    # - pip check
+    - pip check
     - camply --help
   requires:
     - pip

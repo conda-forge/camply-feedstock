@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: camply
-  version: "0.33.1"
+  version: "0.34.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/camply-${{ version }}.tar.gz
-  sha256: 41adcd75a0b6da8890431580c6b551b109cbaa84343da3d8ce9baad6d48ce07d
+  sha256: f268cf8c9af67244ffc0faf2fb85ecb3834c35e853975b79ac19dab2fdb09076
 
 build:
   number: 0
